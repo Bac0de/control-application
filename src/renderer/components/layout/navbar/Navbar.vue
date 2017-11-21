@@ -31,7 +31,7 @@
       </div>
       <div class="col nav-item dropdown navbar-dropdown d-flex align-items-center justify-content-center" v-dropdown>
         <a class="nav-link dropdown-toggle d-flex align-items-center justify-content" href="#" @click.prevent="closeMenu">
-          <a class="menu-icon i-nav-question notify"></a>
+          <i class="menu-icon i-nav-help notify"></i>
         </a>
         <div class="dropdown-menu">
           <div class="dropdown-menu-content">
