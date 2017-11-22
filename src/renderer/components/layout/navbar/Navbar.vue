@@ -16,7 +16,7 @@
       <div class="offset-lg-8"></div>
       <div class="col nav-item dropdown navbar-dropdown d-flex align-items-center justify-content-center" v-dropdown>
         <a class="nav-link dropdown-toggle d-flex align-items-center justify-content" href="#" @click.prevent="closeMenu">
-          <i class="menu-icon i-nav-alarm notify"></i>
+          <i class="menu-icon i-nav-alarm"></i>
         </a>
         <div class="dropdown-menu">
           <div class="dropdown-menu-content">
@@ -31,7 +31,7 @@
       </div>
       <div class="col nav-item dropdown navbar-dropdown d-flex align-items-center justify-content-center" v-dropdown>
         <a class="nav-link dropdown-toggle d-flex align-items-center justify-content" href="#" @click.prevent="closeMenu">
-          <i class="menu-icon i-nav-help notify"></i>
+          <i class="menu-icon i-nav-help"></i>
         </a>
         <div class="dropdown-menu">
           <div class="dropdown-menu-content">
@@ -49,7 +49,7 @@
       </div>
       <div class="col nav-item dropdown navbar-dropdown d-flex align-items-center justify-content-center" v-dropdown>
         <a class="nav-link dropdown-toggle d-flex align-items-center justify-content" href="#" @click.prevent="closeMenu">
-          <i class="menu-icon i-nav-account notify"></i>
+          <i class="menu-icon i-nav-account"></i>
         </a>
         <div class="dropdown-menu last">
           <div class="dropdown-menu-content">
@@ -182,26 +182,6 @@
           }
         }
       }
-    }
-
-    .notify {
-      position: relative;
-
-      &::after {
-         content: '';
-         position: absolute;
-         right: -6px;
-         top: -6px;
-         background-color: $main-color;
-         height: 12px;
-         width: 12px;
-         border-radius: 50%;
-       }
-    }
-
-    .i-nav-notification.notify::after {
-      right: -4px;
-      top: 0;
     }
 
     @include media-breakpoint-down(md) {
