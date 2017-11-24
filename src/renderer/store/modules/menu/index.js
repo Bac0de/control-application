@@ -1,13 +1,13 @@
 import * as types from '../../mutation-types'
+import login from './login'
 import dashboard from './dashboard'
 import network from './network'
 import images from './images'
 import events from './events'
 
-//  import auth from './auth'
-
 const state = {
   items: [
+    login,
     dashboard,
     network,
     images,

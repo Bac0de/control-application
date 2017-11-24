@@ -2,7 +2,7 @@
   <aside class="sidebar">
     <batu-scrollbar>
       <ul class="sidebar-menu">
-        <li v-for="(item, index) in menuItems">
+        <li v-for="(item, index) in menuItems" v-if="index !== 0">
           <router-link
             :to="item.path"
             class="sidebar-link"
