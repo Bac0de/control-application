@@ -1,20 +1,20 @@
-// import Alert from 'src/components/batu-components/batu-alert/BatuAlert.vue'
-// import Chart from 'src/components/batu-components/batu-chart/BatuChart.vue'
-// import Chat from 'src/components/batu-components/batu-chat/BatuChat.vue'
-// import DataTable from 'src/components/batu-components/batu-datatable/BatuDataTable.vue'
-// import Feed from 'src/components/batu-components/batu-feed/BatuFeed.vue'
-// import Modal from 'src/components/batu-components/batu-modal/BatuModal.vue'
-// import MultiSelect from 'src/components/batu-components/batu-multi-select/BatuMultiSelect.vue'
-// import PreLoader from 'src/components/batu-components/batu-preloader/BatuPreLoader.vue'
-// import ProfileCard from 'src/components/batu-components/batu-profile-card/BatuProfileCard.vue'
-// import ProgressBar from 'src/components/batu-components/batu-progress-bar/BatuProgressBar.vue'
+// import Alert from './batu-alert/BatuAlert.vue'
+// import Chart from './batu-chart/BatuChart.vue'
+// import Chat from './batu-chat/BatuChat.vue'
+// import DataTable from './batu-datatable/BatuDataTable.vue'
+// import Feed from './batu-feed/BatuFeed.vue'
+import Modal from './batu-modal/BatuModal.vue'
+// import MultiSelect from './batu-multi-select/BatuMultiSelect.vue'
+// import PreLoader from './batu-preloader/BatuPreLoader.vue'
+// import ProfileCard from './batu-profile-card/BatuProfileCard.vue'
+// import ProgressBar from './batu-progress-bar/BatuProgressBar.vue'
 import Scrollbar from './batu-scrollbar/BatuScrollbar.vue'
-// import SimpleSelect from 'src/components/batu-components/batu-simple-select/BatuSimpleSelect.vue'
-// import SocialNews from 'src/components/batu-components/batu-social-news/BatuSocialNews.vue'
-// import Switch from 'src/components/batu-components/batu-switch/BatuSwitch.vue'
-// import Tabs from 'src/components/batu-components/batu-tabs/BatuTabs.vue'
+// import SimpleSelect from './batu-simple-select/BatuSimpleSelect.vue'
+// import SocialNews from './batu-social-news/BatuSocialNews.vue'
+// import Switch from './batu-switch/BatuSwitch.vue'
+// import Tabs from './batu-tabs/BatuTabs.vue'
 import Widget from './batu-widget/BatuWidget.vue'
-// import Wizard from 'src/components/batu-components/batu-wizard/BatuWizard.vue'
+// import Wizard from './batu-wizard/BatuWizard.vue'
 
 const BatuComponentsPlugin = {
   install (Vue, options) {
@@ -23,7 +23,7 @@ const BatuComponentsPlugin = {
     // Vue.component(Chat.name, Chat)
     // Vue.component(DataTable.name, DataTable)
     // Vue.component(Feed.name, Feed)
-    // Vue.component(Modal.name, Modal)
+    Vue.component(Modal.name, Modal)
     // Vue.component(MultiSelect.name, MultiSelect)
     // Vue.component(PreLoader.name, PreLoader)
     // Vue.component(ProfileCard.name, ProfileCard)

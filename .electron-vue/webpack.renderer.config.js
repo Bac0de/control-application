@@ -133,6 +133,8 @@ let rendererConfig = {
   resolve: {
     alias: {
       '@': path.join(__dirname, '../src/renderer'),
+      'conf': path.join(__dirname, '../src/conf'),
+      'main': path.join(__dirname, '../src/main'),
       'vue$': 'vue/dist/vue.esm.js'
     },
     extensions: ['.js', '.vue', '.json', '.css', '.node']

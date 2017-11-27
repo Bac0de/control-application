@@ -1,15 +1,70 @@
 <template>
   <div class="row network-node-widget">
     <div class="col-md-2 col-xl-2">
-      <a class="i-network-node-active"></a>
+      <a class="i-network-node-active" @click="showModal()"></a>
+      <p>{{node.address}}</p>
     </div>
+
+    <batu-modal :show.sync="show" ref="modal">
+      <div slot="title">Modal Test</div>
+      <a class="i-network-node-vm-active" slot="vm">
+      </a>
+    </batu-modal>
   </div>
 </template>
 
 <script>
+  import BatuModal from '../batu-components/batu-modal/BatuModal'
+  // import host from 'conf/host_config'
+
   export default {
     name: 'network-node-widget',
+    props: {
+      node: {}
+    },
     components: {
+      BatuModal
+    },
+    data () {
+      return {
+        vms: [],
+        show: true
+      }
+    },
+    methods: {
+      showModal () {
+        this.$refs.modal.open()
+      },
+
+      getVMs () {
+        const baseURI = 'http://127.0.0.1:10000'
+        this.$http.get(`${baseURI}/common/vm/list`, {
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest, XDomainRequest',
+            'Content-Type': 'application/multipart/form-data; charset=UTF-8'
+          }
+          /*
+          proxy: {
+            host: host['master'],
+            port: 10000
+          }
+          */
+        })
+          .then((res) => {
+            this.vms = res.data.members
+            console.log(this.nodes)
+          })
+          .catch((err) => {
+            if (err.response) {
+              console.log(err.response.headers)
+            } else if (err.request) {
+              console.log(err.request)
+            } else {
+              console.log(err.message)
+            }
+            console.log(err.config)
+          })
+      }
     }
   }
 </script>
