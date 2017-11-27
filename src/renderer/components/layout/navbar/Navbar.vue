@@ -2,7 +2,7 @@
   <nav class="navbar app-navbar navbar-toggleable-md">
     <div class="navbar-brand-container d-flex align-items-center justify-content-start">
       <a class="navbar-brand" href="#">
-        <i class="i-logo-batu"></i>
+        <i class="i-logo-text"></i>
       </a>
     </div>
 
@@ -12,8 +12,9 @@
         <a class="menu-icon i-menu-expanded" href="#" @click.prevent="toggleSidebar(false)" v-if="sidebarOpened"></a>
         <a class="menu-icon i-menu-collapsed" href="#" @click.prevent="toggleSidebar(true)" v-else></a>
       </div>
+      <div class=""></div>
 
-      <div class="offset-lg-8"></div>
+      <div class="offset-lg-9"></div>
       <div class="col nav-item dropdown navbar-dropdown d-flex align-items-center justify-content-center" v-dropdown>
         <a class="nav-link dropdown-toggle d-flex align-items-center justify-content" href="#" @click.prevent="closeMenu">
           <i class="menu-icon i-nav-alarm"></i>

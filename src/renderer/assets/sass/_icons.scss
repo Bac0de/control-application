@@ -1,8 +1,10 @@
-.i-logo-batu {
+// navbar icons
+
+.i-logo-text {
   display: inline-block;
-  width: 120px;
-  height: 30px;
-  background: url('assets/icons/logo_none_text.svg') no-repeat center center;
+  width: 100px;
+  height: 50px;
+  background: url('assets/icons/logo-text.svg') no-repeat center center;
 }
 
 .i-nav-alarm {
@@ -40,6 +42,8 @@
   background: url('assets/icons/menu-collapsed.svg') no-repeat center center;
 }
 
+// sidebar icons
+
 .i-menu-dashboard {
   display: inline-block;
   width: 25px;
@@ -66,4 +70,38 @@
   width: 25px;
   height: 25px;
   background: url('assets/icons/menu-events.svg') no-repeat center center;
+}
+
+// network icons
+
+.i-network-node-active {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: url('assets/icons/network-node-active.svg') no-repeat center center;
+
+  &:hover {
+    background: url('assets/icons/network-node-active-hover.svg') no-repeat center center;
+  }
+}
+
+.i-network-node-inactive {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: url('assets/icons/network-node-inactive.svg') no-repeat center center;  
+}
+
+.i-network-node-vm-active {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: url('assets/icons/network-node-vm-active.svg') no-repeat center center;
+}
+
+.i-network-node-vm-inactive {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background: url('assets/icons/network-node-vm-inactive.svg') no-repeat center center;
 }
