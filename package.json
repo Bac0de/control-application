@@ -66,6 +66,7 @@
     "vue": "^2.5.3",
     "vue-bulma-expanding": "0.0.1",
     "vue-electron": "^1.0.6",
+    "vue-multiselect": "^2.0.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0"
@@ -112,7 +113,6 @@
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^13.0.5",
     "vue-style-loader": "^3.0.1",
-    "vue-svg-loader": "^0.3.0",
     "vue-template-compiler": "^2.4.2",
     "webpack": "^3.5.2",
     "webpack-dev-server": "^2.7.1",
