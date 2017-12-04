@@ -105,3 +105,16 @@
   height: 200px;
   background: url('assets/icons/network-node-vm-inactive.svg') no-repeat center center;
 }
+
+// modal
+
+.modal-close {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('assets/icons/button-close.svg') no-repeat center center;
+
+  &:hover {
+    background: url('assets/icons/button-close-hover.svg') no-repeat center center;    
+  }
+}

@@ -51,6 +51,7 @@ h4, .h4 {
   letter-spacing: 3px;
   text-transform: uppercase;
   cursor: pointer;
+  border-radius: 0;
 
   &.dropdown-toggle.theme-toggle {
     @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
