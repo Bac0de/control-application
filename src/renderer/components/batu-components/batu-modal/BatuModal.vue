@@ -10,18 +10,14 @@
                 <div class="modal-title">
                   <slot name="title"></slot>
                 </div>
+                <a class="modal-close" @click="cancel"></a>
               </slot>
             </div>
             <!--Container-->
             <div class="modal-body">
-              <slot name="vm"></slot>
-            </div>
-            <!--Footer-->
-            <div class="modal-footer">
-              <slot name="footer">
-                <button type="button" :class="okClass" @click="ok">{{okText}}</button>
-                <button type="button" :class="cancelClass" @click="cancel">{{cancelText}}</button>
-              </slot>
+              <div class="row">
+                <slot name="vm"></slot>
+              </div>
             </div>
           </div>
         </div>
@@ -58,10 +54,6 @@
       cancelText: {
         type: String,
         default: 'CANCEL'
-      },
-      okClass: {
-        type: String,
-        default: 'btn btn-primary'
       },
       cancelClass: {
         type: String,
@@ -102,8 +94,8 @@
       }
     },
     methods: {
-      ok () {
-        this.$emit('ok')
+      close () {
+        this.$emit('close')
         this.show = false
       },
       cancel () {
@@ -153,8 +145,8 @@
   .modal-header {
     height: $modal-header-height;
     padding: $modal-header-padding-y $modal-header-padding-x;
-    border-bottom: $modal-header-border;
     font-size: $font-size-larger;
+    color: $main-color;
     display: flex;
     align-items: center;
   }
@@ -163,17 +155,8 @@
     border-radius: $modal-content-border-radius;
   }
 
-  .modal-footer {
-    justify-content: center;
-    padding: 0 $modal-inner-padding;
-    padding-bottom: calc(#{$modal-inner-padding} - #{$modal-footer-btns-padding-bottom});
-    flex-wrap: wrap;
-    .btn {
-      margin: 0 $modal-footer-btns-margin-x $modal-footer-btns-padding-bottom $modal-footer-btns-margin-x;
-    }
-  }
-
   .modal-dialog {
+    max-width: 700px !important;
     box-shadow: $modal-content-sm-up-box-shadow;
   }
 </style>

@@ -1,12 +1,16 @@
 <template>
   <div class="network">
-    <network-node-widget v-for="node in nodes" v-bind:key="node.id" :node="node"></network-node-widget>
+    <network-node-widget
+      v-for="node in nodes"
+      v-bind:key="node.id"
+      :node="node">
+    </network-node-widget>
   </div>
 </template>
 
 <script>
   import NetworkNodeWidget from './NetworkNodeWidget'
-  // import host from 'conf/host_config'
+  import host from 'conf/host_config'
 
   export default {
     name: 'network',
@@ -23,8 +27,8 @@
     },
     methods: {
       getNodes () {
-        // const baseURI = 'http://' + host['master'] + ':10000'
-        const baseURI = 'http://127.0.0.1:10000'
+        const baseURI = 'http://' + host['master'] + ':10000'
+        // const baseURI = 'http://127.0.0.1:10000'
         this.$http.get(`${baseURI}/master/group/list`, {
           headers: {
             'X-Requested-With': 'XMLHttpRequest, XDomainRequest',
@@ -39,7 +43,6 @@
         })
           .then((res) => {
             this.nodes = res.data.members
-            console.log(this.nodes)
           })
           .catch((err) => {
             if (err.response) {
@@ -58,4 +61,9 @@
 
 <style lang="scss">
   @import "../../assets/sass/_variables.scss";
+
+  //Selector styles
+  .multiselect__option--highlight {
+    background: $main-color !important;
+  }
 </style>
