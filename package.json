@@ -53,10 +53,10 @@
     }
   },
   "dependencies": {
-    "awesome-bootstrap-checkbox": "^1.0.0-alpha.5",
+    "awesome-bootstrap-checkbox": "1.0.0-alpha.5",
     "axios": "^0.17.1",
-    "bootstrap": "^4.0.0-alpha.6",
-    "bootstrap-vue": "^1.0.2",
+    "bootstrap": "4.0.0-alpha.6",
+    "bootstrap-vue": "1.0.2",
     "detect-browser": "^2.0.0",
     "element-resize-detector": "^1.1.12",
     "font-awesome": "^4.7.0",
